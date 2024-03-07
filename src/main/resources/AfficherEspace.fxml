@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1051.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AfficherEspace">
+
+    <children>
+        <ImageView fitHeight="750.0" fitWidth="1051.0">
+            <image>
+                <Image url="@image/ListEspace.png" />
+            </image>
+        </ImageView>
+
+        <TextField fx:id="txtNom" layoutX="667.0" layoutY="211.0" prefHeight="26.0" prefWidth="135.0" promptText="Nom" />
+        <Button fx:id="btnSupprimer" layoutX="661.0" layoutY="571.0" mnemonicParsing="false" onAction="#supprimer" prefHeight="35.0" prefWidth="96.0" text="Supprimer" />
+        <Button fx:id="btnModifier" layoutX="660.0" layoutY="512.0" mnemonicParsing="false" onAction="#modifier" prefHeight="35.0" prefWidth="96.0" text="Modifier" />
+        <!-- Remplacez le champ d'état par une ComboBox -->
+        <ComboBox fx:id="comboEtat" blendMode="HARD_LIGHT" layoutX="667.0" layoutY="262.0" prefHeight="26.0" prefWidth="135.0" promptText="État">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="LIBRE" />
+                    <String fx:value="RESERVE" />
+                </FXCollections>
+            </items>
+        </ComboBox>
+        <TextArea fx:id="txtDescription" layoutX="667.0" layoutY="362.0" prefHeight="121.0" prefWidth="189.0" promptText="Description" />
+
+        <TextField fx:id="txtCapacite" layoutX="667.0" layoutY="309.0" prefHeight="26.0" prefWidth="135.0" promptText="Capacité" />
+        <Label fx:id="lblTitleError" layoutX="305.0" layoutY="362.0" prefHeight="18.0" prefWidth="86.0" />
+
+        <ListView fx:id="listEspace" layoutX="130.0" layoutY="213.0" prefHeight="402.0" prefWidth="478.0" />
+        <Button layoutX="661.0" layoutY="634.0" mnemonicParsing="false" onAction="#ajouterEspace" prefHeight="35.0" prefWidth="96.0" text="ajouter un espace" />
+        <TextField fx:id="txtRechercheNom" layoutX="22.0" layoutY="288.0" prefHeight="26.0" prefWidth="86.0" promptText="Rechercher" />
+        <ChoiceBox fx:id="choixTri" layoutX="22.0" layoutY="249.0" prefHeight="26.0" prefWidth="86.0" />
+        <Button fx:id="btnCalendrier" blendMode="HARD_LIGHT" layoutX="151.0" layoutY="634.0" onAction="#afficherCalendrier" opacity="0.0" prefHeight="80.0" prefWidth="86.0" text="Afficher Calendrier" />
+        <Button fx:id="btnStats" blendMode="HARD_LIGHT" layoutX="238.0" layoutY="638.0" onAction="#afficherStatistiques" opacity="0.0" prefHeight="72.0" prefWidth="86.0" text="Statistiques" />
+      <Label layoutX="50.0" layoutY="218.0" prefHeight="26.0" prefWidth="38.0" text="Trier" textFill="#153f6f">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+
+        <Button fx:id="retourButton" layoutX="845.0" layoutY="45.0" onAction="#retournerVersAcceuil" opacity="0.0" prefHeight="57.0" prefWidth="157.0" text="Retour vers l'accueil" />
+        <Button fx:id="retourButton1" layoutX="26.0" layoutY="14.0" onAction="#retournerVersAcceuil" opacity="0.0" prefHeight="209.0" prefWidth="158.0" text="Retour vers l'accueil" />
+
+
+    </children>
+
+</AnchorPane>

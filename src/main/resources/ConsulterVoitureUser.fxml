@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="750.0" prefWidth="1051.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ConsulterVoitureUser">
+    <children>
+        <ImageView fitHeight="750.0" fitWidth="1051.0">
+            <image>
+                <Image url="@image/VotreListe.png" />
+            </image>
+        </ImageView>
+        <TextField fx:id="textFieldMarque" layoutX="221.0" layoutY="302.0" prefHeight="41.0" prefWidth="212.0" />
+        <TextField fx:id="textFieldModele" layoutX="221.0" layoutY="375.0" prefHeight="41.0" prefWidth="212.0" />
+        <TextField fx:id="textFieldCouleur" layoutX="221.0" layoutY="442.0" prefHeight="41.0" prefWidth="212.0" />
+        <TextField fx:id="textFieldMatricule" layoutX="221.0" layoutY="506.0" prefHeight="41.0" prefWidth="212.0" />
+        <ListView fx:id="voituresListView" layoutX="526.0" layoutY="276.0" prefHeight="331.0" prefWidth="491.0" VBox.vgrow="ALWAYS" />
+    <Button layoutX="144.0" layoutY="614.0" onAction="#modifierVoiture" prefHeight="41.0" prefWidth="154.0" text="Modifier" />
+    <Button layoutX="344.0" layoutY="614.0" onAction="#supprimerVoiture" prefHeight="41.0" prefWidth="154.0" text="Supprimer" />
+        <Button fx:id="retourButton" layoutX="845.0" layoutY="45.0" onAction="#retournerVersAcceuil" opacity="0.0" prefHeight="57.0" prefWidth="157.0" text="Retour vers l'accueil" />
+        <Label layoutX="70.0" layoutY="308.0" prefHeight="30.0" prefWidth="149.0" text="Marque :" textFill="#153f6f">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <Label layoutX="70.0" layoutY="381.0" prefHeight="30.0" prefWidth="149.0" text="Modèle :" textFill="#153f6f">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <Label layoutX="70.0" layoutY="448.0" prefHeight="30.0" prefWidth="149.0" text="Couleur :" textFill="#153f6f">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <Label layoutX="70.0" layoutY="512.0" prefHeight="30.0" prefWidth="149.0" text="Matricule :" textFill="#153f6f">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+    </children>
+
+</AnchorPane>

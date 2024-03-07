@@ -1,0 +1,12 @@
+#captchaLabel {
+    -fx-font-family: "Arial";
+    -fx-font-size: 20px;
+    -fx-text-fill: rgb(0, 0, 0);
+    -fx-background-color: #fbfbfb;
+    -fx-padding: 5px;
+    -fx-border-radius: 5px;
+}
+
+#captchaLabel:hover {
+    -fx-background-color: #fbfbfb;
+}

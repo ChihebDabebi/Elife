@@ -1,0 +1,71 @@
+.error-message {
+    -fx-text-fill: red;
+    -fx-font-size: 12px;
+}
+.button {
+    -fx-background-color: #74b8d9; /* Couleur de fond */
+    -fx-text-fill: white; /* Couleur du texte */
+    -fx-font-size: 14px; /* Taille de la police */
+    -fx-font-family: "Arial"; /* Police de caractères */
+    -fx-padding: 2px 3px; /* Espacement interne */
+    -fx-border-radius: 5px; /* Rayon de bordure */
+    -fx-border-color: #74b8d9; /* Couleur de bordure */
+}
+.button:hover {
+    -fx-background-color: #74b8d9; /* Couleur de fond au survol */
+    -fx-border-color: #74b8d9; /* Couleur de bordure au survol */
+}
+.text-field1 {
+    -fx-background-color: transparent; /* Couleur de fond */
+    -fx-border-color: #007bff; /* Couleur de bordure */
+    -fx-border-width: 1px; /* Largeur de la bordure */
+    -fx-border-radius: 15px; /* Rayon de bordure */
+    -fx-padding: 5px; /* Espacement interne */
+    -fx-font-size: 14px; /* Taille de la police */
+    -fx-font-family: "Arial"; /* Police de caractères */
+    -fx-text-fill:  black;
+
+
+}
+
+.text-field1:focused {
+    -fx-pref-width: 500px;
+}
+.text-field2 {
+    -fx-background-color: #f2f2f2; /* Couleur de fond */
+    -fx-border-color: #007bff; /* Couleur de bordure */
+    -fx-border-width: 1px; /* Largeur de la bordure */
+    -fx-border-radius: 15px; /* Rayon de bordure */
+    -fx-padding: 5px; /* Espacement interne */
+    -fx-font-size: 14px; /* Taille de la police */
+    -fx-font-family: "Arial"; /* Police de caractères */
+
+}
+
+
+.label, .textfield, .button, .colorpicker {
+    -fx-alignment: center; /* Centrer le contenu horizontalement */
+}
+
+.anchor-pane {
+    -fx-background-color: #f0f0f0; /* Couleur de fond */
+}
+.label{
+    -fx-font-family: Bold;
+}
+.colorpicker {
+    -fx-pref-width: 100px; /* Largeur préférée du ColorPicker */
+}
+.text-field .text{
+    -fx-text-fill: black;
+}
+.vbox{
+    -fx-alignment: center;
+
+}
+.backg{
+    -fx-background-image: url("image/1.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+}
+

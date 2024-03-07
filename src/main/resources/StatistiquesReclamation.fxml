@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="controllers.StatistiquesReclamation">
+    <VBox spacing="20.0">
+        <BarChart fx:id="barChartDate" prefHeight="300.0" prefWidth="500.0">
+            <xAxis>
+                <CategoryAxis label="Date" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis label="Number of Reclamations" />
+            </yAxis>
+        </BarChart>
+        <PieChart fx:id="pieChartResident" prefHeight="300.0" prefWidth="500.0" title="Reclamations per Resident" />
+    </VBox>
+</AnchorPane>

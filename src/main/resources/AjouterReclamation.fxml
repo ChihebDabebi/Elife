@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="750.0" prefWidth="1051.0" styleClass="back" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AjouterReclamation">
+    <children>
+      <ImageView fitHeight="750.0" fitWidth="1051.0" pickOnBounds="true">
+         <image>
+            <Image url="@image/1.png" />
+         </image>
+      </ImageView>
+          <Button fx:id="loginbtn" layoutX="833.0" layoutY="48.0" mnemonicParsing="false" onAction="#back" opacity="0.0" prefHeight="54.0" prefWidth="191.0" text="login" />
+        <VBox alignment="CENTER" layoutX="14.0" layoutY="75.0" prefHeight="750.0" prefWidth="1051.0" spacing="10" AnchorPane.bottomAnchor="-75.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="-14.0" AnchorPane.topAnchor="75.0">
+            <children>
+                <Label text="Ajouter Reclamation" />
+                <HBox alignment="CENTER" spacing="10">
+                    <Label text="Catégorie:" />
+                    <TextField fx:id="CategorieRecTF" prefHeight="25.0" prefWidth="194.0" />
+                </HBox>
+                <HBox alignment="CENTER" spacing="10">
+                    <Label text="Description:" />
+                    <TextField fx:id="descriRecTF" prefHeight="136.0" prefWidth="202.0" />
+                </HBox>
+                <!-- CAPTCHA Section -->
+                <HBox alignment="CENTER" spacing="10">
+                    <Label text="CAPTCHA:" />
+
+                    <Label fx:id="captchaLabel" layoutX="442.0" layoutY="369.0" prefHeight="71.0" prefWidth="181.0" stylesheets="styleOu.css" text="" textFill="WHITE" />
+
+                    <TextField fx:id="captchaInput" promptText="Enter CAPTCHA" />
+                </HBox>
+                <!-- End CAPTCHA Section -->
+                <!-- Drag and Drop Image Section -->
+                <VBox fx:id="dragDropBox" alignment="CENTER" onDragDropped="#handleDragDropped" onDragOver="#handleDragOver" spacing="10">
+                    <Label text="Drag and Drop Image Here" />
+                    <ImageView fx:id="imageView" fitHeight="200" fitWidth="200" preserveRatio="true" />
+                   <!-- End Drag and Drop Image Section -->
+                   <Button onAction="#ajouter" text="Ajouter" />
+                </VBox>
+            </children>
+        </VBox>
+    </children>
+
+</AnchorPane>

@@ -1,0 +1,5 @@
+.back {
+    -fx-background-image: url("/src/Facture.png") ;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+}

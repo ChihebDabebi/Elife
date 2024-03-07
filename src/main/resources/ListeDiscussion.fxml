@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="750.0" prefWidth="1051.0" styleClass="backg" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ListeDiscussion">
+   <children>
+      <StackPane prefHeight="248.0" prefWidth="1051.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Listes des discussions ">
+               <font>
+                  <Font name="System Bold Italic" size="28.0" />
+               </font>
+            </Text>
+         </children>
+      </StackPane>
+      <StackPane prefHeight="70.0" prefWidth="614.0">
+         <children>
+            <TextField fx:id="rechercheField" promptText="Rechercher une discussion" />
+         </children>
+      </StackPane>
+      <StackPane prefHeight="215.0" prefWidth="588.0">
+         <children>
+            <TableView fx:id="table" prefHeight="394.0" prefWidth="529.0" styleClass="table">
+               <columns>
+                  <TableColumn fx:id="titre" prefWidth="241.0" text="Titre" />
+                  <TableColumn fx:id="createur" prefWidth="187.0" text="Createur" />
+                  <TableColumn fx:id="dateCreation" prefWidth="185.0" text="Date de Creation" />
+               </columns>
+            </TableView>
+         </children>
+      </StackPane>
+      <StackPane prefHeight="150.0" prefWidth="200.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#redirectToAjout" text="Ajouter une discussion" />
+         </children>
+      </StackPane>
+      <StackPane prefHeight="150.0" prefWidth="200.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#retournerVersAcceuil" text="Retour" />
+         </children>
+      </StackPane>
+
+   </children>
+</VBox>

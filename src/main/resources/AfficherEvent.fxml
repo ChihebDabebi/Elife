@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="750.0" prefWidth="1051.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AfficherEvent">
+    <children>
+        <ImageView fitHeight="750.0" fitWidth="1051.0" layoutY="1.0" pickOnBounds="true">
+            <image>
+                <Image url="@image/ListeEvent.png" /> <!-- Assurez-vous d'avoir l'image correcte et le chemin correct -->
+            </image>
+        </ImageView>
+        <ListView fx:id="listeEvents" layoutX="136.0" layoutY="222.0" prefHeight="373.0" prefWidth="457.0" />
+        <HBox layoutX="498.0" layoutY="418.0" spacing="20.0" />
+        <Button fx:id="boutonGererEspace" layoutX="37.0" layoutY="103.0" mnemonicParsing="false" onAction="#ouvrirAjouterEspace" opacity="0.0" prefHeight="46.0" prefWidth="144.0" text="Gerer les espaces " />
+        <TextField fx:id="txtRechercheNom" layoutX="21.0" layoutY="297.0" prefHeight="26.0" prefWidth="103.0" promptText="Rechercher " />
+        <ChoiceBox fx:id="triChoiceBox" layoutX="21.0" layoutY="253.0" prefHeight="26.0" prefWidth="103.0">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Nom" />
+                    <String fx:value="Date" />
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+        <TextField fx:id="textFieldTitre" layoutX="664.0" layoutY="253.0" prefHeight="26.0" prefWidth="106.0" promptText="Titre" />
+        <TextField fx:id="textFieldNbrPersonne" layoutX="664.0" layoutY="303.0" prefHeight="26.0" prefWidth="106.0" promptText="Nombre de Personnes:" />
+        <ComboBox fx:id="comboBoxEspace" layoutX="664.0" layoutY="391.0" prefHeight="26.0" prefWidth="106.0" promptText="Espace" />
+        <Button fx:id="boutonModifier" layoutX="213.0" layoutY="612.0" onAction="#modifierEvent" prefHeight="26.0" prefWidth="82.0" text="Modifier" />
+        <Button fx:id="boutonSupprimer" layoutX="344.0" layoutY="612.0" onAction="#supprimerEvent" prefHeight="26.0" prefWidth="82.0" text="Supprimer" />
+        <TextField fx:id="textFieldDate" layoutX="664.0" layoutY="347.0" prefHeight="26.0" prefWidth="106.0" promptText="Date" />
+        <TextArea fx:id="textFieldListeInvites" layoutX="664.0" layoutY="435.0" prefHeight="142.0" prefWidth="189.0" promptText="Liste Invités:" />
+      <Label layoutX="59.0" layoutY="222.0" text="Trier" textFill="#153f6f">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+        <Button fx:id="retourButton" layoutX="845.0" layoutY="45.0" onAction="#retournerVersAcceuil" opacity="0.0" prefHeight="57.0" prefWidth="157.0" text="Retour vers l'accueil" />
+        <Button fx:id="retourButton1" layoutX="26.0" layoutY="14.0" onAction="#retournerVersAcceuil" opacity="0.0" prefHeight="209.0" prefWidth="158.0" text="Retour vers l'accueil" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AjouterAppartement">
+   <ImageView fitHeight="750.0" fitWidth="1051.0" layoutX="-24.0" layoutY="-12.0" pickOnBounds="true">
+      <image>
+         <Image url="@image/ajoutAppart.png" />
+      </image>
+   </ImageView>
+
+    <VBox blendMode="HARD_LIGHT" layoutX="145.0" layoutY="246.0" prefHeight="305.0" prefWidth="177.0" spacing="10.0">
+        <Text fx:id="title" />
+        <VBox spacing="10.0">
+            <Label text="Numéro de l'appartement" />
+            <TextField fx:id="numAppartementField" />
+        </VBox>
+
+        <VBox spacing="10.0">
+            <Label text="Taille" />
+            <TextField fx:id="tailleField" />
+        </VBox>
+        <VBox spacing="10.0">
+            <Label text="Nombre d'étage" />
+            <TextField fx:id="nbrEtageField" />
+        </VBox>
+        <VBox blendMode="HARD_LIGHT" spacing="10.0">
+            <Label text="Statut Appartement" />
+            <ComboBox fx:id="statutComboBox">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Occupee" />
+                        <String fx:value="Libre" />
+                    </FXCollections>
+                </items>
+            </ComboBox>
+        </VBox>
+    </VBox>
+
+    <ListView fx:id="residentListView" layoutX="368.0" layoutY="246.0" prefHeight="294.0" prefWidth="401.0" />
+     <Button blendMode="HARD_LIGHT" layoutX="376.0" layoutY="563.0" mnemonicParsing="false" onAction="#AjouterAppartement" prefHeight="34.0" prefWidth="71.0" text="Ajouter" />
+    <Button blendMode="HARD_LIGHT" layoutX="831.0" layoutY="30.0" onAction="#retournerPagePrecedente" opacity="0.0" prefHeight="65.0" prefWidth="152.0" text="Exit" />
+
+</AnchorPane>

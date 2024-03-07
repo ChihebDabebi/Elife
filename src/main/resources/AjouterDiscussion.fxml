@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="750.0" prefWidth="1051.0" styleClass="backg" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AjoutDiscussion">
+   <children>
+      <StackPane prefHeight="327.0" prefWidth="1051.0">
+         <children>
+            <Label prefHeight="0.0" prefWidth="252.0" text="Ajouter une discussion">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </StackPane>
+      <Label text="Titre">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <StackPane prefHeight="74.0" prefWidth="1051.0">
+         <children>
+            <TextField fx:id="titre" prefHeight="25.0" prefWidth="359.0" promptText="Ajouter titre de votre discussion" styleClass="text-field1" />
+         </children>
+      </StackPane>
+      <StackPane prefHeight="24.0" prefWidth="468.0">
+         <children>
+            <Label fx:id="errorMessage" prefHeight="17.0" prefWidth="359.0" styleClass="error-message" textFill="#f50000">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </StackPane>
+      <Label text="Description">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <StackPane prefHeight="60.0" prefWidth="468.0">
+         <children>
+            <TextField fx:id="description" prefHeight="58.0" prefWidth="418.0" promptText="Ajouter description de votre discussion" styleClass="text-field1" />
+         </children>
+      </StackPane>
+      <StackPane prefHeight="24.0" prefWidth="468.0">
+         <children>
+            <Label fx:id="errorMessage2" prefHeight="17.0" prefWidth="359.0" styleClass="error-message" textFill="RED">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </StackPane>
+      <StackPane prefHeight="150.0" prefWidth="200.0">
+         <children>
+            <ColorPicker fx:id="color" styleClass="button" />
+         </children>
+      </StackPane>
+      <StackPane prefHeight="150.0" prefWidth="200.0">
+         <children>
+            <Button onAction="#ajouterEvent" text="Validate" />
+         </children>
+      </StackPane>
+      <StackPane prefHeight="150.0" prefWidth="200.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#changeScene" styleClass="button" text="Liste des discussions" />
+         </children>
+      </StackPane>
+   </children>
+</VBox>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AjouterVoiture">
+    <!-- Image de fond -->
+    <ImageView fitHeight="600.0" fitWidth="800.0">
+        <image>
+            <Image url="@image/Av.png" />
+        </image>
+    </ImageView>
+
+    <!-- Bouton "Gérer les parkings" -->
+    <Button layoutX="50.0" layoutY="123.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="95.0" text="Gérer les parkings" visible="false" />
+
+    <Button fx:id="consulterButton" layoutX="300.0" layoutY="470.0" text="Consulter Voiture" onAction="#handleConsulterButton" />
+
+
+    <!-- Bouton "Ajouter une voiture" -->
+    <Button fx:id="ajouterButton" layoutX="274.0" layoutY="502.0" onAction="#handleAjouterButton" prefHeight="40.0" prefWidth="156.0" text="Ajouter une voiture" />
+</AnchorPane>

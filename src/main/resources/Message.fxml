@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="vb" prefHeight="750.0" prefWidth="1051.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MessageController">
+   <ButtonBar prefHeight="40.0" prefWidth="200.0">
+      <buttons>
+         <Button mnemonicParsing="false" onAction="#retour" text="Retour" />
+         <Button fx:id="update" mnemonicParsing="false" onAction="#modifierTitre" prefHeight="25.0" prefWidth="68.0" text="modifier" textFill="#3e08d3" />
+         <Button fx:id="delete" mnemonicParsing="false" onAction="#supprimerDiscussion" text="supprimer" textFill="#fc0101" />
+      </buttons>
+   </ButtonBar>
+    <ListView fx:id="messageList" prefHeight="400.0" prefWidth="665.0" VBox.vgrow="ALWAYS">
+        <!-- Les messages seront ajoutés ici -->
+    </ListView>
+    <HBox spacing="10">
+        <Button fx:id="attachButton" text="📎" />
+        <Button fx:id="emojiButton" onAction="#emojiPopup" text="😊" />
+        <TextField fx:id="messageField" styleClass="text-field2" HBox.hgrow="ALWAYS" />
+        <Button fx:id="sendButton" text="Envoyer" />
+    </HBox>
+   <Label fx:id="error" prefHeight="17.0" prefWidth="674.0" textFill="#e10909" />
+    <ImageView fx:id="imageView" />
+
+</VBox>

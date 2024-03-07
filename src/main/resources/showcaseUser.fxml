@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane fx:id="anchor" prefHeight="750.0" prefWidth="1051.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.showcaseUser">
+    <children>
+      <ImageView fitHeight="750.0" fitWidth="1051.0" pickOnBounds="true">
+         <image>
+            <Image url="@image/admin3.png" />
+         </image>
+         <viewport>
+            <Rectangle2D minX="1051.0" minY="750.0" width="1051.0" />
+         </viewport>
+      </ImageView>
+        <ListView fx:id="listeUsers" layoutX="430.0" layoutY="209.0" prefHeight="395.0" prefWidth="562.0" />
+        <HBox layoutX="46.0" layoutY="366.0" spacing="20.0" /> <!-- Vous pouvez ajouter d'autres éléments ici si nécessaire -->
+        <Button fx:id="modifyUserButton" blendMode="HARD_LIGHT" layoutX="638.0" layoutY="632.0" mnemonicParsing="false" onAction="#handleModifyUserButtonClick" prefHeight="26.0" prefWidth="147.0" text="Modify" />
+        <TextField fx:id="txtRechercheNom" layoutX="701.0" layoutY="175.0" prefHeight="26.0" prefWidth="147.0" promptText="Rechercher par nom" />
+        <Button layoutX="852.0" layoutY="176.0" prefHeight="26.0" prefWidth="80.0" text="Rechercher" />
+        <Button layoutX="526.0" layoutY="176.0" prefHeight="26.0" prefWidth="115.0" text="Trier par role" />
+        <Button layoutX="20.0" layoutY="477.0" mnemonicParsing="false" onAction="#yarjaaliladd" opacity="0.0" prefHeight="66.0" prefWidth="341.0" text="Show Users" />
+
+    </children>
+</AnchorPane>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="750.0" prefWidth="1051.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ModifierFacture">
+   <ImageView fitHeight="750.0" fitWidth="1051.0" pickOnBounds="true">
+      <image>
+         <Image url="@image/modiffact.png" />
+      </image>
+   </ImageView>
+
+    <Label layoutX="145.0" layoutY="289.0" text="Numéro Facture" />
+    <Label layoutX="145.0" layoutY="337.0" text="Montant" />
+    <Label layoutX="142.0" layoutY="429.0" text="Date" />
+    <Label layoutX="132.0" layoutY="521.0" text="Description Facture" />
+    <Label layoutX="137.0" layoutY="469.0" text="Type Facture" />
+    <Label layoutX="142.0" layoutY="387.0" text="Consommation" />
+
+    <Button blendMode="HARD_LIGHT" layoutX="274.0" layoutY="621.0" mnemonicParsing="false" onAction="#modifierFacture" text="Modifier" />
+    <TextField fx:id="id_consommation_modifier" layoutX="271.0" layoutY="387.0" />
+
+    <TextField fx:id="id_numFacture_modifier" blendMode="HARD_LIGHT" layoutX="271.0" layoutY="289.0" />
+    <TextField fx:id="id_montant_modifier" blendMode="HARD_LIGHT" layoutX="271.0" layoutY="337.0" />
+    <DatePicker fx:id="id_date_modifier" blendMode="HARD_LIGHT" layoutX="274.0" layoutY="425.0" />
+    <TextField fx:id="id_description_modifier" blendMode="HARD_LIGHT" layoutX="274.0" layoutY="521.0" prefHeight="82.0" prefWidth="196.0" />
+    <Button blendMode="HARD_LIGHT" layoutX="830.0" layoutY="39.0" onAction="#retournerPagePrecedente" opacity="0.0" prefHeight="60.0" prefWidth="175.0" text="EXIT" />
+
+    <ComboBox fx:id="typeComboBox" blendMode="HARD_LIGHT" layoutX="274.0" layoutY="473.0" prefHeight="26.0" prefWidth="122.0">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Electricite" />
+                <String fx:value="Eau" />
+                <String fx:value="Gaz" />
+                <String fx:value="Dechets" />
+
+            </FXCollections>
+        </items>
+    </ComboBox>
+
+</AnchorPane>

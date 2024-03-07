@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="750.0" prefWidth="1051.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.StatisticsController">
+    <ImageView fitHeight="750.0" fitWidth="1051.0" pickOnBounds="true">
+        <image>
+            <Image url="@image/bg.png" />
+        </image>
+    </ImageView>
+    <!-- Header -->
+    <Label blendMode="HARD_LIGHT" layoutX="380.0" layoutY="77.0" prefHeight="27.0" prefWidth="238.0" text="Statistiques des espaces">
+        <font>
+            <Font name="System Bold Italic" size="18.0" />
+        </font>
+    </Label>
+
+    <!-- Bar Chart -->
+
+    <BarChart fx:id="barChart" layoutX="175.0" layoutY="162.0" prefHeight="200.0" prefWidth="734.0">
+        <xAxis>
+            <CategoryAxis fx:id="monthAxis" label="Espace" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+            <NumberAxis fx:id="countAxis" label="Capacité" side="LEFT" />
+        </yAxis>
+    </BarChart>
+
+
+    <!-- Pie Chart -->
+    <PieChart fx:id="pieChart" layoutX="449.0" layoutY="369.0" prefHeight="311.0" prefWidth="339.0" />
+
+    <!-- Table View -->
+    <TableView fx:id="tableView" layoutX="82.0" layoutY="404.0" prefHeight="190.0" prefWidth="200.0">
+        <!-- Define columns -->
+        <columns>
+            <TableColumn fx:id="spaceColumn" prefWidth="196.80003356933594" text="Espace">
+                <cellValueFactory>
+                    <PropertyValueFactory property="name" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+
+</AnchorPane>

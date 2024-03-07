@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="750.0" prefWidth="1051.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AfficherAppartement">
+    <children>
+      <ImageView fitHeight="750.0" fitWidth="1051.0" pickOnBounds="true">
+         <image>
+            <Image url="@image/afficherappart.png" />
+         </image>
+      </ImageView>
+        <ListView fx:id="listView" layoutX="87.0" layoutY="240.0" prefHeight="390.0" prefWidth="560.0">
+            <items>
+                <FXCollections fx:factory="observableArrayList" />
+            </items>
+        </ListView>
+        <Button blendMode="HARD_LIGHT" layoutX="679.0" layoutY="264.0" onAction="#ajouterAppartement" opacity="0.0" prefHeight="50.0" prefWidth="287.0" text="Ajouter " />
+        <Button blendMode="HARD_LIGHT" layoutX="679.0" layoutY="435.0" onAction="#modiferAppartement" opacity="0.0" prefHeight="70.0" prefWidth="287.0" text="Modifier " />
+        <Button blendMode="HARD_LIGHT" layoutX="679.0" layoutY="525.0" onAction="#gererFacture" opacity="0.0" prefHeight="62.0" prefWidth="320.0" text="Gerer Facture" />
+        <Button blendMode="HARD_LIGHT" layoutX="690.0" layoutY="344.0" onAction="#supprimerAppartement" opacity="0.0" prefHeight="61.0" prefWidth="265.0" text="Supprimer " />
+        <TextField fx:id="searchTF" layoutX="87.0" layoutY="206.0" promptText="Taper " />
+        <Button blendMode="HARD_LIGHT" layoutX="710.0" layoutY="630.0" onAction="#afficherStatistiques" opacity="0.01" prefHeight="81.0" prefWidth="70.0" text="Afficher Statistiques" />
+        <ComboBox fx:id="typeFactureComboBox" layoutX="256.0" layoutY="206.0" prefWidth="110.0" promptText="Trier par">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Nom" />
+                    <String fx:value="Numéro" />
+                </FXCollections>
+            </items>
+        </ComboBox>
+    </children>
+</AnchorPane>

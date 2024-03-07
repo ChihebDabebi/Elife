@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="750.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AfficherReclamation">
+    <children>
+        <ImageView fitHeight="750.0" fitWidth="1051.0" pickOnBounds="true">
+         <image>
+            <Image url="@image/1.png" />
+         </image>
+        </ImageView>
+        <TextField fx:id="CategorieRecTF" layoutX="249.0" layoutY="202.0" prefHeight="25.0" prefWidth="150.0" />
+        <TextField fx:id="searchTextField" layoutX="651.0" layoutY="202.0" promptText="Search by description" />
+
+        <Label layoutX="408.0" layoutY="206.0" text="Description" />
+        <TextField fx:id="descriRecTF" layoutX="478.0" layoutY="202.0" prefHeight="25.0" prefWidth="150.0" />
+        <Button fx:id="ajouterButton" layoutX="256.0" layoutY="589.0" onAction="#ajouter" text="Ajouter" />
+
+        <Button fx:id="modifierButton" layoutX="363.0" layoutY="589.0" mnemonicParsing="false" onAction="#modifier" text="Modifier" />
+        <Button fx:id="supprimerButton" layoutX="498.0" layoutY="589.0" mnemonicParsing="false" onAction="#supprimer" text="Supprimer" />
+        <Button fx:id="ajouterReponseButton" layoutX="534.0" layoutY="523.0" mnemonicParsing="false" onAction="#goToAjouterReponse" opacity="0.0" text="Ajouter Réponse" />
+        <Button fx:id="consulterReponseButton" layoutX="638.0" layoutY="589.0" mnemonicParsing="false" onAction="#consulterReponse" prefHeight="17.0" prefWidth="125.0" text="Consulter Réponses" />
+        <Button fx:id="loginbtn" layoutX="833.0" layoutY="52.0" mnemonicParsing="false" onAction="#acceuil" opacity="0.0" prefHeight="54.0" prefWidth="191.0" text="login" />
+
+        <ListView fx:id="listViewRec" layoutX="249.0" layoutY="238.0" prefHeight="310.0" prefWidth="536.0" />
+    </children>
+</AnchorPane>

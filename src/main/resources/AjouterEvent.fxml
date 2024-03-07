@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="750.0" prefWidth="1051.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AjouterEvent">
+
+    <!-- L'image d'arrière-plan -->
+    <ImageView fitHeight="750.0" fitWidth="1051.0" layoutY="-1.0">
+        <image>
+            <Image url="@image/AjouterEventFINAL.png" />
+        </image>
+    </ImageView>
+    <TextField fx:id="titleField" layoutX="630.0" layoutY="199.0" prefHeight="26.0" prefWidth="103.0" />
+    <DatePicker fx:id="datePicker" layoutX="632.0" layoutY="247.0" prefHeight="26.0" prefWidth="103.0" />
+    <TextField fx:id="nbrPersonneField" layoutX="632.0" layoutY="296.0" prefHeight="26.0" prefWidth="103.0" />
+    <ComboBox fx:id="espaceComboBox" layoutX="630.0" layoutY="340.0" prefHeight="26.0" prefWidth="103.0">
+        <!-- Les noms d'espaces seront ajoutés dynamiquement -->
+    </ComboBox>
+
+    <Button blendMode="HARD_LIGHT" layoutX="596.0" layoutY="525.0" mnemonicParsing="false" onAction="#ajouterEvent" prefHeight="26.0" prefWidth="87.0" text="Ajouter" />
+    <Button fx:id="boutonPDF" blendMode="HARD_LIGHT" layoutX="723.0" layoutY="525.0" onAction="#genererPDF" prefHeight="26.0" prefWidth="87.0" text="  PDF" />
+
+    <Label layoutX="481.0" layoutY="344.0" text="Espace">
+        <font>
+            <Font size="13.0" />
+        </font>
+    </Label>
+    <Label layoutX="474.0" layoutY="400.0" text="Liste Invités">
+        <font>
+            <Font size="13.0" />
+        </font>
+    </Label>
+    <Label layoutX="480.0" layoutY="299.0" text="Nombre de personnes">
+        <font>
+            <Font size="13.0" />
+        </font>
+    </Label>
+
+    <Label layoutX="481.0" layoutY="250.0" text="Date">
+        <font>
+            <Font size="13.0" />
+        </font>
+    </Label>
+    <Label layoutX="480.0" layoutY="199.0" prefHeight="18.0" prefWidth="42.0" text="Titre">
+        <font>
+            <Font size="13.0" />
+        </font>
+    </Label>
+    <TextArea fx:id="listInvitesField" layoutX="632.0" layoutY="391.0" prefHeight="95.0" prefWidth="190.0" />
+    <Button fx:id="boutonConsulterEvents" layoutX="384.0" layoutY="525.0" onAction="#consulterMesEvents" text="Consulter Mes Événements" />
+    <Button fx:id="retourButton" layoutX="29.0" layoutY="14.0" onAction="#retournerVersAcceuil" opacity="0.0" prefHeight="181.0" prefWidth="129.0" text="Retour vers l'accueil" />
+
+</AnchorPane>

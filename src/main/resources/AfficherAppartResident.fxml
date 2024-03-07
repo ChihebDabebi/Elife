@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="592.0" prefWidth="1051.0" stylesheets="@StyleR.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AfficherAppartResident">
+   <ImageView fitHeight="737.0" fitWidth="1051.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@image/AfficherAppartResident.png" />
+      </image>
+   </ImageView>
+    <ListView fx:id="listView" layoutX="91.0" layoutY="182.0" prefHeight="304.0" prefWidth="550.0">
+        <items>
+            <FXCollections fx:factory="observableArrayList" />
+        </items>
+    </ListView>
+    <Button layoutX="679.0" layoutY="209.0" onAction="#gererFactureResident" opacity="0.0" prefHeight="54.0" prefWidth="271.0" text="Gerer Facture" />
+    <Button blendMode="HARD_LIGHT" layoutX="679.0" layoutY="297.0" onAction="#afficherStatistiquesAppartement" opacity="0.0" prefHeight="58.0" prefWidth="76.0" text="Afficher Statistique" />
+    <Button layoutX="833.0" layoutY="29.0" onAction="#retournerPagePrecedente" opacity="0.0" prefHeight="54.0" prefWidth="178.0" text="EXIT" />
+
+</AnchorPane>
